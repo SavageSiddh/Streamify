@@ -1,7 +1,7 @@
 {
-  "name": "backend-project",
+  "name": "streamify",
   "version": "1.0.0",
-  "description": "a backend in add backend project",
+  "description": "REST API for a video sharing platform",
   "type": "module",
   "main": "index.js",
   "scripts": {
@@ -9,10 +9,9 @@
   },
   "keywords": [
     "javascript",
-    "backend",
-    "chai"
+    "nodemon","express","mongodb","mongoose"
   ],
-  "author": "Arnab Senapati",
+  "author": "Siddhant Londhe",
   "license": "ISC",
   "devDependencies": {
     "nodemon": "^3.1.9",
