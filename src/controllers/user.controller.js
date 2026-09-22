@@ -200,7 +200,7 @@ const refreshAccessToken = asyncHandler(async (req, res) => {
     // 2️⃣ Find the user by ID and update their details
     const user = await User.findByIdAndUpdate(
         req.user?._id,  // Find user by their ID from the request
-        { $set: { fullname: fullName, email: email } }, // Update full name and email
+        { $set: { fullName: fullName, email: email } }, // Update full name and email
         { new: true } // Return the updated user object
     ).select("-password -refreshToken"); // Exclude password and refresh token from the response
     // 3️⃣ Send response back to the client
@@ -237,7 +237,7 @@ const refreshAccessToken = asyncHandler(async (req, res) => {
           throw new ApiError(500, "Error while uploading on avatar")
       }
       const user = await User.findByIdAndUpdate(req.user?._id,{
-        $set: {coverImage: coverimage.url}
+        $set: {coverimage: coverimage.url}
       }, {new:true}).select("-password")
 
       return res.status(200).json(new ApiResponse(200, user, "Cover image updated successfully"))
